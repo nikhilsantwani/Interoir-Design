@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: "Poppins",sans-serif;
+        }
+        .container{
+            height: 100vh;
+            /* border: 2px solid red; */
+            display: flex;
+        }
+        .sidebar{
+            height: 100vh; 
+            width: 25%;
+            border: 2px solid blue;
+            background-color: rgb(255, 67, 67);
+            position: fixed;
+
+        }
+        .content{
+            /* height: 100vh; */
+            width: 70%;
+            /* border: 2px solid green; */
+            background-color: white;
+            position: absolute;
+            right: 0px;
+        }
+        .comp{
+            height: 40vh;
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .comp h1{
+            margin-right: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .comp-list{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;  
+        }
+        ul{
+            margin: 5px;
+            height: 50px;
+            width: 100%;
+            list-style: none;
+        }
+        li{
+            width: 90%;
+            padding: 8px;
+            /* margin-right: 150px; */
+            /* background-color: white; */
+            margin: 7px;
+            text-align: left;
+            border-radius: 10px;
+        
+        }
+        
+        li a{
+            color: white;
+            font-size: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        li:hover{
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+        li a:hover{
+            color: black;
+        }
+        @media(max)
+        .cont-upper{
+            height: 35vh;
+            width: 50%;
+            border: 5px rgb(0, 0, 0);
+            /* display: flex; */
+            /* justify-content: center; */
+            /* align-items: center; */
+            margin: 30px;
+        }
+        .Interior{
+            height: 5vh;
+            width: 100%;
+            padding: 30px;
+            font-size: 50px;
+            font-weight: bold;
+        }
+        .Showcase{
+            height: 5vh;
+            padding: 30px;
+            font-size: 30px;
+            font-weight: bolder;
+            color: rgb(255, 67, 67);
+        }
+        .space{
+            height: 1.5vh;
+            width: 12%;
+            border: 2px solid red;
+            background-color: rgb(255, 67, 67);
+            border-radius: 10px;
+            margin-left:28px;
+        }
+        .cont-lower{
+            /* height: 65vh; */
+            /* background-color: black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            /* border: 2px solid black; */
+
+            
+        }
+        .image1{
+            height: 400px;
+            width: 47%;
+            border: 2px solid black;
+            margin: 10px;
+            
+        }
+        .image1 img{
+            width: 100%;
+            height: 100%;
+        }
+        .image2{
+            height: 250px;
+            width: 47%;
+            border: 2px solid black;
+            margin: 10px;
+        }
+        .image2 img{
+            width: 100%;
+            height: 100%;
+        }
+        .image3{
+            height: 250px;
+            width: 47%;
+            border: 2px solid black;
+            margin: 10px;
+        }
+        .image3 img{
+            width: 100%;
+            height: 100%;
+        }
+        .Service{
+            margin-top: 70px;
+            font-size: 25px;
+            color: #f44336;
+        }
+        .service-background{
+            height: 10px;
+            background-color: #f44336;
+            width: 80px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .service-content{
+            margin-top: 25px;
+        }
+        .service-content p{
+            padding: 5px;
+            font-size: 20px;
+        }
+        .Designer{
+            margin-top: 70px;
+            font-size: 25px;
+            color: #f44336;
+        }
+        .Designer-space{
+            height: 10px;
+            background-color: #f44336;
+            width: 80px;
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-bottom: 25px;
+        }
+        .Designer-content p{
+            padding: 7px;
+            font-size: 20px;
+        }
+        .Design-images{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .des-image1{
+            height: 400px;
+            width: 30%;
+            border: 2px solid black;
+            margin: 12px;
+        }
+        .des-image1 img{
+            width: 100%;
+        }
+        .package{
+            margin-top: 70px;
+            font-size: 25px;
+            color: #f44336;
+        }
+        .package-space{
+            height: 10px;
+            background-color: #f44336;
+            width: 80px;
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-bottom: 25px;
+        }
+        .package-content{
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container2{
+            height: 700px;
+            width: 100%;
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            /* border: 2px solid gray; */
+            height: 600px;
+            width: 40%;
+            margin: 10px;
+        }
+        .first{
+            height: 100px;
+            background-color: #616161;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* .second{
+            height: 60px;
+            border: 2px solid #616161;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+        .third{
+            height: 60px;
+            border: 2px solid #616161;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        } */
+        .forth{
+            height: 60px;
+            border: 2px solid #616161;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            background-color: #f1f1f3;
+        }
+        .fifth{
+            height: 120px;
+            border: 2px solid #616161;
+            text-align: center;
+            background-color: #f1f1f3;
+        }
+        .fifth h1{
+            margin: 15px;
+        }
+        .six{
+            height: 65px;
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f1f1f3;
+        }
+        .six button{
+            height: 50px;
+            width: 100px;
+            font-size: 20px;
+            background-color: white;
+            border-style: none;
+        }
+        .six button:hover{
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+        .first1{
+            height: 100px;
+            background-color: #f44336;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .six1{
+            height: 65px;
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f1f1f3;
+        }
+        .six1 button{
+            height: 50px;
+            width: 100px;
+            font-size: 20px;
+            background-color:  #f44336;
+            color: #f1f1f3;
+            border-style: none;
+        }
+        .six1 button:hover{
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+        .Contact{
+            margin-top: 70px;
+            font-size: 25px;
+            color: #f44336;
+            /* border: 2px solid yellow; */
+        }
+        .Contact-space{
+            height: 10px;
+            background-color: #f44336;
+            width: 80px;
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-bottom: 25px;
+        }
+        .Contact-content {
+            height: 500px;
+        }
+        .Contact-content p{
+            font-size: 22px;
+            margin-top: 15px;
+            width: 89%;
+        }
+        input{
+            width: 88%;
+            height: 45px;
+        }
+        .Contact-content button{
+            width: 88%;
+            height: 45px;
+            margin-top: 25px;
+            background-color: #f44336;
+            color: white;
+            font-size: 20px;
+        }
+        .Contact-content button:hover{
+            background-color: #dad5d5;
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="comp">
+                <h1 style="color: white;width: 60px;">Company Name</h1>
+            </div>
+            <div class="comp-list">
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Showcase">Showcase</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#Designers">Designer</a></li>
+                    <li><a href="#Package">Package</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="cont-upper">
+                <div class="Interior">Interior Design</div>
+                <!-- <h1 style="font-size: 60px;font-weight: bold;">Interior Design</h1>
+                <h2 style="color: red;">Showcase.</h2> -->
+                <div class="Showcase">Showcase.</div>
+                <div class="space"></div>
+            </div>
+ <div class="cont-lower">
+                <div class="image1">
+                    <img src="https://www.w3schools.com/w3images/kitchenconcrete.jpg" alt="">
+                </div>
+                <div class="image1">
+                    <img src="https://www.w3schools.com/w3images/atrium.jpg" alt="">
+                </div>
+                <div class="image2">
+                    <img src="https://www.w3schools.com/w3images/livingroom.jpg" alt="">
+                </div>
+                <div class="image2">
+                    <img src="https://www.w3schools.com/w3images/bedroom.jpg" alt="">
+                </div>
+                <div class="image3">
+                    <img src="https://www.w3schools.com/w3images/diningroom.jpg" alt="">
+                </div>
+                <div class="image3">
+                    <img src="https://www.w3schools.com/w3images/livingroom2.jpg" alt="">
+                </div>
+            </div>
+           <div class="Service">
+            <h1>Services.</h1>
+            <div class="service-background"></div>
+           </div>
+           <div class="service-content">
+            <p>We are a interior design service that focus on what's best for your home and what's best for you!<p>
+            <p>Some text about our services - what we do and what we offer. We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="Designer">
+            <h1>Designer.</h1>
+        </div>
+        <div class="Designer-space">
+        </div>
+        <div class="Designer-content">
+            <p>The best team in the world.</p>
+            <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h3 style="margin-top: 10px;margin-left: 10px;">Our designers are thoughtfully chosen:</h3>
+        </div>
+        <div class="Design-images">
+            <div class="des-image1">
+                <img src="https://www.w3schools.com/w3images/team2.jpg" alt="">
+                <h3 style="font-size: 30px;font-style: normal;margin: 10px;">John Doe</h3>
+                <h3 style="font-weight: lighter;margin: 10px;">CEO & Founder</h3>
+                <p style="margin: 10px;font-size: 20px;">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            </div>
+            <div class="des-image1">
+                <img src="https://www.w3schools.com/w3images/team1.jpg" alt="">
+                <h3 style="font-size: 30px;font-style: normal;margin: 10px;">Jane Doe</h3>
+                <h3 style="font-weight: lighter;margin: 10px;">Designer</h3>
+                <p style="margin: 10px;font-size: 20px;">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            </div>
+            <div class="des-image1">
+                <img src="https://www.w3schools.com/w3images/team3.jpg" alt="">
+                <h3 style="font-size: 30px;font-style: normal;margin: 10px;">Mike Ross</h3>
+                <h3 style="font-weight: lighter;margin: 10px;">Architect</h3>
+                <p style="margin: 10px;font-size: 20px;">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            </div>
+        </div>
+        <div class="package">
+            <h1>Packages.</h1>
+        </div>
+        <div class="package-space"></div>
+        <div class="package-content">
+            <p>Some text our prices. Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>
+        </div>
+        <div class="container2">
+            <div class="box">
+                <div class="first">
+                    <h2>Basic</h2>
+                </div>
+                <div class="forth">
+                    <p>Floorplanning</p>
+                </div>
+                <div class="forth">
+                    <p>10 hours support</p>
+                </div>
+                <div class="forth">
+                    <p>Photography</p>
+                </div>
+                <div class="forth">
+                    <p>20% furniture discount</p>
+                </div>
+                <div class="forth">
+                    <p>Good deals</p>
+                </div>
+                <div class="fifth">
+                    <h1>$ 199</h1>
+                    <p>per rooms</p>
+                </div>
+                <div class="six">
+                    <button>Sign UP</button>
+                </div>
+            </div>
+        <div class="box">
+            <div class="first1">
+                <h2>Pro</h2>
+            </div>
+            <div class="forth">
+                <p>Floorplanning</p>
+            </div>
+            <div class="forth">
+                <p>50 hours support</p>
+            </div>
+            <div class="forth">
+                <p>Photography</p>
+            </div>
+            <div class="forth">
+                <p>50% furniture discount</p>
+            </div>
+            <div class="forth">
+                <p>GREAT deals</p>
+            </div>
+            <div class="fifth">
+                <h1>$ 249</h1>
+                <p>per rooms</p>
+            </div>
+            <div class="six1">
+                <button>Sign UP</button>
+            </div>
+        </div>
+        </div>
+        <div class="Contact">
+            <h1>Contact.</h1>
+        </div>
+        <div class="Contact-space"></div>
+        <div class="Contact-content">
+            <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
+            <p>Name</p>
+            <form action="">
+                <input type="text">
+                <p>Email</p>
+                <input type="text">
+                <p>Message</p>
+                <input type="text">
+                <button>Send Message</button>
+            </form>
+        </div>
+   </div>
+        
+    </div>
+</body>
+</html>
